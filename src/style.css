@@ -3283,3 +3283,129 @@ button:disabled {
     font-size: 26px;
   }
 }
+
+.login-help-row {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.login-help-btn {
+  width: auto;
+  min-width: auto;
+  padding: 0;
+  margin-bottom: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.login-help-btn:hover {
+  border: none;
+  box-shadow: none;
+  transform: none;
+  opacity: 0.85;
+}
+
+.forgot-password-modal {
+  max-width: 460px;
+}
+
+.forgot-password-submit {
+  width: 100%;
+  margin-top: 8px;
+}
+
+@media (max-width: 700px) {
+  .login-help-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.auth-blur-bg {
+  filter: blur(6px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.auth-overlay-strong {
+  backdrop-filter: blur(10px);
+  background: rgba(2, 6, 23, 0.5);
+}
+
+.login-help-row {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.login-help-btn,
+.login-help-link {
+  width: auto;
+  min-width: auto;
+  padding: 0;
+  margin-bottom: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.login-help-btn:hover,
+.login-help-link:hover {
+  border: none;
+  box-shadow: none;
+  transform: none;
+  opacity: 0.85;
+}
+
+.forgot-password-modal {
+  max-width: 460px;
+}
+
+.forgot-password-submit {
+  width: 100%;
+  margin-top: 8px;
+}
+
+@media (max-width: 700px) {
+  .login-help-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.forgot-username-row {
+  margin: 6px 0 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.forgot-username-btn {
+  background: transparent;
+  border: none;
+  font-size: 13px;
+  color: var(--accent);
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+}
+
+.forgot-username-btn:hover {
+  opacity: 0.8;
+}

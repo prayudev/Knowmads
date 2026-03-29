@@ -14,17 +14,17 @@ export function AuthProvider({ children }) {
 
   // LOAD USER ON REFRESH
   useEffect(() => {
-  const savedUser = JSON.parse(localStorage.getItem("currentUser"));
-  if (savedUser) {
-    setUser(savedUser);
-  }
-}, []);
+    const storedUser = getCurrentUser();
+    if (storedUser) {
+      setUser(storedUser);
+    }
+  }, []);
 
   // LOGIN
-  const login = (userData) => {
-    setUser(userData);
-    setCurrentUser(userData);
-  };
+ const login = (userData) => {
+  setUser(userData);
+  localStorage.setItem("currentUser", JSON.stringify(userData));
+};
 
   // LOGOUT
   const logout = () => {
