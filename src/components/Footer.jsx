@@ -50,7 +50,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://t.me/YOUR_TELEGRAM_USERNAME"
+                href="https://t.me/priyastudydiary"
                 target="_blank"
                 rel="noreferrer"
               >

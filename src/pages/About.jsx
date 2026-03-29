@@ -104,7 +104,7 @@ export default function About() {
 
   {/* Telegram */}
   <a
-    href="https://t.me/YOUR_TELEGRAM_USERNAME"
+    href="https://t.me/priyastudydiary"
     target="_blank"
     rel="noreferrer"
     className="floating-contact-btn telegram-btn"
