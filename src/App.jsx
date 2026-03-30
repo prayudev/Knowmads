@@ -20,7 +20,10 @@ import Contact from "./pages/Contact";
 
 // 🔒 PROTECTED ROUTE
 function Protected({ children }) {
-  const { user } = useAuth();
+  const { user , authReady } = useAuth();
+  if (!authReady) {
+    return <div className="page-loader">Loading...</div>;
+  }
 
   if (!user) return <Navigate to="/login" replace />;
 

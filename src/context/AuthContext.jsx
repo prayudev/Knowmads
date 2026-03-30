@@ -7,50 +7,62 @@ import {
   saveUsers
 } from "../lib/storage";
 
-const Ctx = createContext();
+const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
+  const [authReady, setAuthReady] = useState(false);
 
-  // LOAD USER ON REFRESH
   useEffect(() => {
-    const storedUser = getCurrentUser();
-    if (storedUser) {
-      setUser(storedUser);
+    const savedUser = getCurrentUser();
+
+    if (savedUser) {
+      setUser(savedUser);
     }
+
+    setAuthReady(true);
   }, []);
 
-  // LOGIN
- const login = (userData) => {
-  setUser(userData);
-  localStorage.setItem("currentUser", JSON.stringify(userData));
-};
+  const login = (userData) => {
+    setUser(userData);
+    setCurrentUser(userData);
+  };
 
-  // LOGOUT
   const logout = () => {
     setUser(null);
     clearCurrentUser();
   };
 
-  // UPDATE USER (🔥 MOST IMPORTANT FIX)
- const updateUser = (updatedUser, oldUsername = null) => {
-  setUser(updatedUser);
-  setCurrentUser(updatedUser);
+  const updateUser = (updatedUser, oldUsername = null) => {
+    const users = getUsers();
 
-  const users = getUsers();
+    const updatedUsers = users.map((u) => {
+      if (oldUsername) {
+        return u.username === oldUsername ? updatedUser : u;
+      }
+      return u.username === updatedUser.username ? updatedUser : u;
+    });
 
-  const updatedUsers = users.map((u) =>
-    u.username === (oldUsername || updatedUser.username) ? updatedUser : u
-  );
-
-  saveUsers(updatedUsers);
-};
+    saveUsers(updatedUsers);
+    setCurrentUser(updatedUser);
+    setUser(updatedUser);
+  };
 
   return (
-    <Ctx.Provider value={{ user, login, logout, updateUser }}>
+    <AuthContext.Provider
+      value={{
+        user,
+        login,
+        logout,
+        updateUser,
+        authReady
+      }}
+    >
       {children}
-    </Ctx.Provider>
+    </AuthContext.Provider>
   );
 }
 
-export const useAuth = () => useContext(Ctx);
+export function useAuth() {
+  return useContext(AuthContext);
+}
