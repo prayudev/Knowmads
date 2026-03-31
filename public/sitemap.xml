@@ -5,69 +5,34 @@
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-  <url>
-    <loc>https://knowmads.vercel.app/login</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>hhttps://knowmads.vercel.app/register</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://knowmads.vercel.app/select-class</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://knowmads.vercel.app/subjects</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://knowmads.vercel.app/timer</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://knowmads.vercel.app/progress</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://knowmads.vercel.app/schedule</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://knowmads.vercel.app/notes</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://knowmads.vercel.app/current-affairs</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://knowmads.vercel.app/profile</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
+
   <url>
     <loc>https://knowmads.vercel.app/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
   <url>
     <loc>https://knowmads.vercel.app/faq</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
   <url>
     <loc>https://knowmads.vercel.app/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://knowmads.vercel.app/notes</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://knowmads.vercel.app/CurrentAffairs</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>
